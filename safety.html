@@ -1,0 +1,165 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Edmin</title>
+	<link type="text/css" href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link type="text/css" href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+	<link type="text/css" href="css/theme.css" rel="stylesheet">
+	<link type="text/css" href="images/icons/css/font-awesome.css" rel="stylesheet">
+    <link href="css/menu.css" rel="stylesheet" type="text/css" />
+	<script src="js/jquery.min.js"></script>
+	<script src="js/hover_pack.js"></script>
+	<script src="js/cross/initSafety.js"></script>
+	<script src="js/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="js/cross/menu.js" ></script>
+</head>
+
+<script>
+   	   	$(document).ready(function() {
+   	   				initSessionUser();
+   	   				initSafety();
+   	   	});
+   	   	
+</script>
+
+<body>
+
+ <div class="index-banner1">
+  <div class="header-top">	
+	<div class="wrap">
+   		<div class="logo">
+			<a href="index.html"><img src="images/logo.png" alt=""/></a>
+		</div>	
+		<div class="menu">
+			<div id="session_username">
+				<a href="javascript:login_open()">登录</a>
+				<span>/</span>
+				<a href="javascript:register_open()">注册</a>
+			</div>
+			<a href="#" class="right_bt" id="activator"><img src="images/nav_icon.png" alt=""></a>
+				<div class="box" id="box">
+				  	<div class="box_content_center1">
+					    <div class="menu_box_list1">
+							<ul>
+								<li><a href="index.html">Home</a></li>
+								<li class="active"><a href="about.html">About</a></li> 
+								<li><a href="blog.html">Blog</a></li> 
+								<li><a href="gallery.html">Gallery</a></li>
+								<li><a href="contact.html">Contact</a></li>
+								<li><a href="404.html">404</a></li>
+							</ul>
+					     </div>
+						 <a class="boxclose" id="boxclose"><img src="images/close.png" alt=""></a>
+					 </div>                
+			      </div>
+			                 <script type="text/javascript">
+								var $ = jQuery.noConflict();
+									$(function() {
+										$('#activator').click(function(){
+												$('#box').animate({'top':'0px'},500);
+										});
+										$('#boxclose').click(function(){
+												$('#box').animate({'top':'-700px'},500);
+										});
+									});
+									$(document).ready(function(){
+									
+									//Hide (Collapse) the toggle containers on load
+									$(".toggle_container").hide(); 
+									
+									//Switch the "Open" and "Close" state per click then slide up/down (depending on open/close state)
+									$(".trigger").click(function(){
+										$(this).toggleClass("active").next().slideToggle("slow");
+										return false; //Prevent the browser jump to the link anchor
+									});
+									
+									});
+							</script>
+			         </div> 	
+			         <div class="clear"></div>		
+		  </div>	
+		</div>	
+	   </div>
+
+
+
+	<div class="wrapper">
+		<div class="container">
+			<div class="row">
+				<div class="span3">
+					<div class="sidebar">
+
+						<ul class="widget widget-menu unstyled">
+							<li class="active">
+								<a href="user.html">
+									<i class="menu-icon icon-dashboard"></i>
+									我的空间
+								</a>
+							</li>
+							<li>
+								<a href="application.html">
+									<i class="menu-icon icon-bullhorn"></i>
+									好友申请
+								</a>
+							</li>
+							<li>
+								<a href="friends.html">
+									<i class="menu-icon icon-inbox"></i>
+									好友列表
+								</a>
+							</li>
+							
+							<li>
+								<a href="userList.html">
+									<i class="menu-icon icon-tasks"></i>
+									添加好友
+								</a>
+							</li>
+						</ul>
+
+						<ul class="widget widget-menu unstyled">
+                                <li><a href="evaluating.html"><i class="menu-icon icon-bold"></i> 我的评测 </a></li>
+                                <li><a href="book.html"><i class="menu-icon icon-book"></i>书籍管理 </a></li>
+                                <li><a href="My.html"><i class="menu-icon icon-paste"></i>个人中心 </a></li>
+                                <li><a href="safety.html"><i class="menu-icon icon-table"></i>安全中心 </a></li>
+                            </ul>
+					</div>
+				</div>
+
+
+				<div class="span9">
+					<div class="content">
+
+						<div class="module" style="width: 90%;margin: 0 10%;">
+							<div class="module-head">
+								<h3>找回密码</h3>
+							</div>
+							<div class="module-body" style="display: block;width: 50%;margin: 20px auto;">
+								<p style="display: inline-block;margin-bottom: 20px;">
+									密保问题  :
+								</p>
+								<p id="question" style="display: inline-block;margin-bottom: 20px;">
+									 
+								</p>
+								<input type="text" id="answer"  style="display: block;margin-bottom: 20px;"/>
+								<a class="btn btn-primary" onclick="check()">确认</a>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer">
+		<div class="container">
+			<b class="copyright">&copy; 2014 Edmin - EGrappler.com </b> All rights reserved.
+		</div>
+	</div>
+
+	
+</body>

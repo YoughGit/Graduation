@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<script src="js/jquery.min.js"></script>
+<script src="js/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="js/cross/menu.js" ></script>
+</head>
+<body>
+	<script>
+	$(document).ready(function() {
+				initSessionUser();
+			});
+	</script>
+<div class="index-banner">
+  <div class="header-top">	
+	<div class="wrap">
+			
+   		<div class="logo">
+			<a href="index.html"><img src="images/logo.png" alt=""/></a>
+		</div>	-----
+		<div class="menu">
+			<div id="session_username">
+				<a href="javascript:login_open()">登录</a>
+				<span>/</span>
+				<a href="javascript:register_open()">注册</a>
+			</div>
+			<a href="#" class="right_bt" id="activator"><img src="images/nav_icon.png" alt=""></a>
+				<div class="box" id="box">
+				   <div class="box_content_center">
+					   <div class="menu_box_list">
+						   <ul>
+							   <li><a href="index.html">首页</a></li>
+							   <li class="active"><a href="about.html">筛选页</a></li>
+						   </ul>
+						</div>
+						<a class="boxclose" id="boxclose"><img src="images/close.png" alt=""></a>
+					  </div>                
+					</div>
+			                 <script type="text/javascript">
+								var $ = jQuery.noConflict();
+									$(function() {
+										$('#activator').click(function(){
+												$('#box').animate({'top':'0px'},500);
+										});
+										$('#boxclose').click(function(){
+												$('#box').animate({'top':'-700px'},500);
+										});
+									});
+									$(document).ready(function(){
+									
+									//Hide (Collapse) the toggle containers on load
+									$(".toggle_container").hide(); 
+									
+									//Switch the "Open" and "Close" state per click then slide up/down (depending on open/close state)
+									$(".trigger").click(function(){
+										$(this).toggleClass("active").next().slideToggle("slow");
+										return false; //Prevent the browser jump to the link anchor
+									});
+									
+									});
+								</script>
+			         </div> 	
+			      <div class="clear"></div>		
+		  </div>	
+		</div>	
+	    <div class="wmuSlider example1">
+			   
+			
+				 <article style="position: absolute; width: 100%; opacity: 0;"> 
+				   	<div class="banner-wrap">
+						<a href="gallery.html">
+						<div class="cont span_2_of_3">
+						   <h1><br> 在这里，你可以查看学校所有专业，以及对应的课程.</h1>
+						</div>
+						</a>
+					</div>
+				 </article>
+		  </div>
+                  <script src="js/jquery.wmuSlider.js"></script> 
+					<script>
+       				     $('.example1').wmuSlider();         
+   					</script> 	           	      
+   	   </div>
+
+	<div class="footer">
+	   	<div class="wrap">
+	   		<div class="copy">
+			   <p>&copy; 在线咨询</p>
+		    </div>
+	   	</div>
+    </div>
+</body>
+</html>

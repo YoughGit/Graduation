@@ -1,0 +1,8 @@
+
+
+/*底部栏*/
+div.footer{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
